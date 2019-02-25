@@ -20,7 +20,7 @@ npm init stencil app
 and run:
 
 ```bash
-npm start
+npm start-dev
 ```
 
 To build the app for production, run:
