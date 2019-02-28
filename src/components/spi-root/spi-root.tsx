@@ -3,8 +3,7 @@ import { Component } from '@stencil/core';
 
 @Component({
     tag: 'spi-root',
-    styleUrl: 'spi-root.scss',
-    shadow: true
+    styleUrl: 'spi-root.scss'
 })
 export class SpiRoot {
     
