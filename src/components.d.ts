@@ -8,6 +8,7 @@
 import '@stencil/core';
 
 import '@stencil/router';
+import '@stencil/state-tunnel';
 import {
   MatchResults,
 } from '@stencil/router';
@@ -28,6 +29,9 @@ export namespace Components {
   interface AppRoot {}
   interface AppRootAttributes extends StencilHTMLAttributes {}
 
+  interface SpiHeader {}
+  interface SpiHeaderAttributes extends StencilHTMLAttributes {}
+
   interface SpiRoot {}
   interface SpiRootAttributes extends StencilHTMLAttributes {}
 }
@@ -37,6 +41,7 @@ declare global {
     'AppHome': Components.AppHome;
     'AppProfile': Components.AppProfile;
     'AppRoot': Components.AppRoot;
+    'SpiHeader': Components.SpiHeader;
     'SpiRoot': Components.SpiRoot;
   }
 
@@ -44,6 +49,7 @@ declare global {
     'app-home': Components.AppHomeAttributes;
     'app-profile': Components.AppProfileAttributes;
     'app-root': Components.AppRootAttributes;
+    'spi-header': Components.SpiHeaderAttributes;
     'spi-root': Components.SpiRootAttributes;
   }
 
@@ -66,6 +72,12 @@ declare global {
     new (): HTMLAppRootElement;
   };
 
+  interface HTMLSpiHeaderElement extends Components.SpiHeader, HTMLStencilElement {}
+  var HTMLSpiHeaderElement: {
+    prototype: HTMLSpiHeaderElement;
+    new (): HTMLSpiHeaderElement;
+  };
+
   interface HTMLSpiRootElement extends Components.SpiRoot, HTMLStencilElement {}
   var HTMLSpiRootElement: {
     prototype: HTMLSpiRootElement;
@@ -76,6 +88,7 @@ declare global {
     'app-home': HTMLAppHomeElement
     'app-profile': HTMLAppProfileElement
     'app-root': HTMLAppRootElement
+    'spi-header': HTMLSpiHeaderElement
     'spi-root': HTMLSpiRootElement
   }
 
@@ -83,6 +96,7 @@ declare global {
     'app-home': HTMLAppHomeElement;
     'app-profile': HTMLAppProfileElement;
     'app-root': HTMLAppRootElement;
+    'spi-header': HTMLSpiHeaderElement;
     'spi-root': HTMLSpiRootElement;
   }
 

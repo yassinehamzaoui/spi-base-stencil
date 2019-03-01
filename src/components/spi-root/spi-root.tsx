@@ -9,7 +9,11 @@ export class SpiRoot {
     
     render() {
         return (
-            <p>Welcome in SPI ADM !</p>
+            <div>
+                <spi-header></spi-header>
+
+                <p>Welcome in SPI ADM !</p>
+            </div>
         );
     }
 }
