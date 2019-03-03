@@ -32,6 +32,9 @@ export namespace Components {
   interface SpiHeader {}
   interface SpiHeaderAttributes extends StencilHTMLAttributes {}
 
+  interface SpiHome {}
+  interface SpiHomeAttributes extends StencilHTMLAttributes {}
+
   interface SpiRoot {}
   interface SpiRootAttributes extends StencilHTMLAttributes {}
 }
@@ -42,6 +45,7 @@ declare global {
     'AppProfile': Components.AppProfile;
     'AppRoot': Components.AppRoot;
     'SpiHeader': Components.SpiHeader;
+    'SpiHome': Components.SpiHome;
     'SpiRoot': Components.SpiRoot;
   }
 
@@ -50,6 +54,7 @@ declare global {
     'app-profile': Components.AppProfileAttributes;
     'app-root': Components.AppRootAttributes;
     'spi-header': Components.SpiHeaderAttributes;
+    'spi-home': Components.SpiHomeAttributes;
     'spi-root': Components.SpiRootAttributes;
   }
 
@@ -78,6 +83,12 @@ declare global {
     new (): HTMLSpiHeaderElement;
   };
 
+  interface HTMLSpiHomeElement extends Components.SpiHome, HTMLStencilElement {}
+  var HTMLSpiHomeElement: {
+    prototype: HTMLSpiHomeElement;
+    new (): HTMLSpiHomeElement;
+  };
+
   interface HTMLSpiRootElement extends Components.SpiRoot, HTMLStencilElement {}
   var HTMLSpiRootElement: {
     prototype: HTMLSpiRootElement;
@@ -89,6 +100,7 @@ declare global {
     'app-profile': HTMLAppProfileElement
     'app-root': HTMLAppRootElement
     'spi-header': HTMLSpiHeaderElement
+    'spi-home': HTMLSpiHomeElement
     'spi-root': HTMLSpiRootElement
   }
 
@@ -97,6 +109,7 @@ declare global {
     'app-profile': HTMLAppProfileElement;
     'app-root': HTMLAppRootElement;
     'spi-header': HTMLSpiHeaderElement;
+    'spi-home': HTMLSpiHomeElement;
     'spi-root': HTMLSpiRootElement;
   }
 

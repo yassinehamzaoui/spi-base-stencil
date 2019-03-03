@@ -4,7 +4,7 @@ import { sass } from '@stencil/sass';
 // https://stenciljs.com/docs/config
 
 export const config: Config = {
-  globalStyle: 'src/global/app.scss',
+  globalStyle: 'src/global/app.css',
   globalScript: 'src/global/app.ts',
   outputTargets: [
     {
@@ -14,7 +14,13 @@ export const config: Config = {
     }
   ],
   plugins: [
-    sass()
+    sass({
+      injectGlobalPaths: [
+        "node_modules/bulma/sass/utilities/all.sass",
+        "node_modules/bulma/sass/base/all.sass",
+        "node_modules/bulma/sass/elements/container.sass"
+      ]
+    })
   ]
 };
 
