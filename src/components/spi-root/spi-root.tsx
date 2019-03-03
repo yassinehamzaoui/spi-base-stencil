@@ -1,4 +1,5 @@
 import { Component } from "@stencil/core";
+import {MatchResults as _} from '@stencil/router'; // _ = !"declared but never read"
 
 @Component({
   tag: "spi-root",
