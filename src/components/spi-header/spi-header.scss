@@ -1,12 +1,16 @@
 @import "../../../node_modules/bulma/sass/components/navbar.sass";
 @import "../../../node_modules/bulma/sass/elements/button.sass";
-
+@import "../../../node_modules/bulma/sass/layout/hero.sass";
+@import "../../../node_modules/bulma/sass/layout/_all.sass";
+@import "../../../node_modules/bulma/sass/elements/_all.sass";
+@import "../../../node_modules/bulma/sass/components/_all.sass";
+@import "../../../node_modules/bulma/sass/grid/_all.sass";
 .navbar-brand .navbar-item {
-    font-size: 3.8em;
+    font-size: 20px;
 }
 
 .navbar-menu .navbar-item {
-    font-size: 2em;
+    font-size: 20px;
 }
 
 .navbar-menu .navbar-item svg  {
@@ -19,4 +23,7 @@
   }
 .navbar a:hover {
     color: $link;
+}
+.fas {
+    size: 20px;
 }

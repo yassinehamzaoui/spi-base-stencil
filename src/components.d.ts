@@ -9,12 +9,73 @@ import '@stencil/core';
 
 import '@stencil/router';
 import '@stencil/state-tunnel';
+import {
+  MatchResults,
+  RouterHistory,
+} from '@stencil/router';
 
 
 export namespace Components {
 
-  interface SpiBof {}
-  interface SpiBofAttributes extends StencilHTMLAttributes {}
+  interface EnseignantAdd {
+    'history': RouterHistory;
+    'match': MatchResults;
+  }
+  interface EnseignantAddAttributes extends StencilHTMLAttributes {
+    'history'?: RouterHistory;
+    'match'?: MatchResults;
+  }
+
+  interface EnseignantDetails {
+    'history': RouterHistory;
+    'match': MatchResults;
+  }
+  interface EnseignantDetailsAttributes extends StencilHTMLAttributes {
+    'history'?: RouterHistory;
+    'match'?: MatchResults;
+  }
+
+  interface EnseignantEmail {}
+  interface EnseignantEmailAttributes extends StencilHTMLAttributes {}
+
+  interface EnseignantList {}
+  interface EnseignantListAttributes extends StencilHTMLAttributes {}
+
+  interface EnseignantNom {}
+  interface EnseignantNomAttributes extends StencilHTMLAttributes {}
+
+  interface FormationAdd {
+    'history': RouterHistory;
+    'match': MatchResults;
+  }
+  interface FormationAddAttributes extends StencilHTMLAttributes {
+    'history'?: RouterHistory;
+    'match'?: MatchResults;
+  }
+
+  interface FormationDetails {
+    'history': RouterHistory;
+    'match': MatchResults;
+  }
+  interface FormationDetailsAttributes extends StencilHTMLAttributes {
+    'history'?: RouterHistory;
+    'match'?: MatchResults;
+  }
+
+  interface FormationList {}
+  interface FormationListAttributes extends StencilHTMLAttributes {}
+
+  interface FormationNom {}
+  interface FormationNomAttributes extends StencilHTMLAttributes {}
+
+  interface FormationUpdate {
+    'history': RouterHistory;
+    'match': MatchResults;
+  }
+  interface FormationUpdateAttributes extends StencilHTMLAttributes {
+    'history'?: RouterHistory;
+    'match'?: MatchResults;
+  }
 
   interface SpiHeader {}
   interface SpiHeaderAttributes extends StencilHTMLAttributes {}
@@ -28,24 +89,96 @@ export namespace Components {
 
 declare global {
   interface StencilElementInterfaces {
-    'SpiBof': Components.SpiBof;
+    'EnseignantAdd': Components.EnseignantAdd;
+    'EnseignantDetails': Components.EnseignantDetails;
+    'EnseignantEmail': Components.EnseignantEmail;
+    'EnseignantList': Components.EnseignantList;
+    'EnseignantNom': Components.EnseignantNom;
+    'FormationAdd': Components.FormationAdd;
+    'FormationDetails': Components.FormationDetails;
+    'FormationList': Components.FormationList;
+    'FormationNom': Components.FormationNom;
+    'FormationUpdate': Components.FormationUpdate;
     'SpiHeader': Components.SpiHeader;
     'SpiHome': Components.SpiHome;
     'SpiRoot': Components.SpiRoot;
   }
 
   interface StencilIntrinsicElements {
-    'spi-bof': Components.SpiBofAttributes;
+    'enseignant-add': Components.EnseignantAddAttributes;
+    'enseignant-details': Components.EnseignantDetailsAttributes;
+    'enseignant-email': Components.EnseignantEmailAttributes;
+    'enseignant-list': Components.EnseignantListAttributes;
+    'enseignant-nom': Components.EnseignantNomAttributes;
+    'formation-add': Components.FormationAddAttributes;
+    'formation-details': Components.FormationDetailsAttributes;
+    'formation-list': Components.FormationListAttributes;
+    'formation-nom': Components.FormationNomAttributes;
+    'formation-update': Components.FormationUpdateAttributes;
     'spi-header': Components.SpiHeaderAttributes;
     'spi-home': Components.SpiHomeAttributes;
     'spi-root': Components.SpiRootAttributes;
   }
 
 
-  interface HTMLSpiBofElement extends Components.SpiBof, HTMLStencilElement {}
-  var HTMLSpiBofElement: {
-    prototype: HTMLSpiBofElement;
-    new (): HTMLSpiBofElement;
+  interface HTMLEnseignantAddElement extends Components.EnseignantAdd, HTMLStencilElement {}
+  var HTMLEnseignantAddElement: {
+    prototype: HTMLEnseignantAddElement;
+    new (): HTMLEnseignantAddElement;
+  };
+
+  interface HTMLEnseignantDetailsElement extends Components.EnseignantDetails, HTMLStencilElement {}
+  var HTMLEnseignantDetailsElement: {
+    prototype: HTMLEnseignantDetailsElement;
+    new (): HTMLEnseignantDetailsElement;
+  };
+
+  interface HTMLEnseignantEmailElement extends Components.EnseignantEmail, HTMLStencilElement {}
+  var HTMLEnseignantEmailElement: {
+    prototype: HTMLEnseignantEmailElement;
+    new (): HTMLEnseignantEmailElement;
+  };
+
+  interface HTMLEnseignantListElement extends Components.EnseignantList, HTMLStencilElement {}
+  var HTMLEnseignantListElement: {
+    prototype: HTMLEnseignantListElement;
+    new (): HTMLEnseignantListElement;
+  };
+
+  interface HTMLEnseignantNomElement extends Components.EnseignantNom, HTMLStencilElement {}
+  var HTMLEnseignantNomElement: {
+    prototype: HTMLEnseignantNomElement;
+    new (): HTMLEnseignantNomElement;
+  };
+
+  interface HTMLFormationAddElement extends Components.FormationAdd, HTMLStencilElement {}
+  var HTMLFormationAddElement: {
+    prototype: HTMLFormationAddElement;
+    new (): HTMLFormationAddElement;
+  };
+
+  interface HTMLFormationDetailsElement extends Components.FormationDetails, HTMLStencilElement {}
+  var HTMLFormationDetailsElement: {
+    prototype: HTMLFormationDetailsElement;
+    new (): HTMLFormationDetailsElement;
+  };
+
+  interface HTMLFormationListElement extends Components.FormationList, HTMLStencilElement {}
+  var HTMLFormationListElement: {
+    prototype: HTMLFormationListElement;
+    new (): HTMLFormationListElement;
+  };
+
+  interface HTMLFormationNomElement extends Components.FormationNom, HTMLStencilElement {}
+  var HTMLFormationNomElement: {
+    prototype: HTMLFormationNomElement;
+    new (): HTMLFormationNomElement;
+  };
+
+  interface HTMLFormationUpdateElement extends Components.FormationUpdate, HTMLStencilElement {}
+  var HTMLFormationUpdateElement: {
+    prototype: HTMLFormationUpdateElement;
+    new (): HTMLFormationUpdateElement;
   };
 
   interface HTMLSpiHeaderElement extends Components.SpiHeader, HTMLStencilElement {}
@@ -67,14 +200,32 @@ declare global {
   };
 
   interface HTMLElementTagNameMap {
-    'spi-bof': HTMLSpiBofElement
+    'enseignant-add': HTMLEnseignantAddElement
+    'enseignant-details': HTMLEnseignantDetailsElement
+    'enseignant-email': HTMLEnseignantEmailElement
+    'enseignant-list': HTMLEnseignantListElement
+    'enseignant-nom': HTMLEnseignantNomElement
+    'formation-add': HTMLFormationAddElement
+    'formation-details': HTMLFormationDetailsElement
+    'formation-list': HTMLFormationListElement
+    'formation-nom': HTMLFormationNomElement
+    'formation-update': HTMLFormationUpdateElement
     'spi-header': HTMLSpiHeaderElement
     'spi-home': HTMLSpiHomeElement
     'spi-root': HTMLSpiRootElement
   }
 
   interface ElementTagNameMap {
-    'spi-bof': HTMLSpiBofElement;
+    'enseignant-add': HTMLEnseignantAddElement;
+    'enseignant-details': HTMLEnseignantDetailsElement;
+    'enseignant-email': HTMLEnseignantEmailElement;
+    'enseignant-list': HTMLEnseignantListElement;
+    'enseignant-nom': HTMLEnseignantNomElement;
+    'formation-add': HTMLFormationAddElement;
+    'formation-details': HTMLFormationDetailsElement;
+    'formation-list': HTMLFormationListElement;
+    'formation-nom': HTMLFormationNomElement;
+    'formation-update': HTMLFormationUpdateElement;
     'spi-header': HTMLSpiHeaderElement;
     'spi-home': HTMLSpiHomeElement;
     'spi-root': HTMLSpiRootElement;
